@@ -2,12 +2,12 @@
 echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Add brew to $PATH
-echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> /home/ubuntu/.zprofile
+(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/codespace/.profile
 
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Make zsh the default shell
-sudo chsh -s /usr/bin/zsh
+sudo chsh -s /home/linuxbrew/.linuxbrew/bin/zsh
 
 # Zsh config
 curl https://raw.githubusercontent.com/maptv/setup/main/.zshrc -o ~/.zshrc
@@ -29,7 +29,7 @@ curl https://raw.githubusercontent.com/maptv/setup/main/.gitconfig -o ~/.gitconf
 brew install ack bash bat bat-extras bit-git black bottom cairo diff-so-fancy duti dvc exa fd ffmpeg fpp fzf gh git git-delta gnu-tar gnupg imagemagick jq librsvg luarocks neovim node page pandoc pass python@3.11 ranger rename ripgrep ripgrep-all romkatv/powerlevel10k/powerlevel10k ruby rust rustup-init sc-im shellcheck tccutil the_platinum_searcher the_silver_searcher tig tldr tmux universal-ctags vim wget xpdf zsh zsh-autocomplete zsh-autopair zsh-autosuggestions zsh-fast-syntax-highlighting zsh-completions zsh-vi-mode zsh-you-should-use 
 
 ## Install fzf key bindings and fuzzy completion
-/opt/homebrew/opt/fzf/install --completion --key-bindings --no-fish --no-update-rc
+/home/linuxbrew/.linuxbrew/opt/fzf/install --completion --key-bindings --no-fish --no-update-rc
 
 brew install --cask mambaforge
 
@@ -63,13 +63,13 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ## Install nodejs (for coc.vim) and python packages (for nvim-R and ncm-R):
 ### https://github.com/jalvesaq/Nvim-R/blob/main/doc/Nvim-R.txt#L1953
-conda install -yc conda-forge cookiecutter nodejs neovim pybtex
+mamba install -yc conda-forge cookiecutter nodejs neovim pybtex
 
 #### I don't use jupyterlab-git extension, I only demo it in classes
 ##### jupyter labextension install @jupyterlab/git
 ##### jupyter serverextension enable --py jupyterlab_git
 
-conda create -yc conda-forge -n py python=3.8 joblib jupyterlab seaborn numpy pandas scikit-learn scipy
+mamba create -yc conda-forge -n py python=3.8 joblib jupyterlab seaborn numpy pandas scikit-learn scipy
 
 ##### jupyter labextension install jupyterlab_vim
 
@@ -81,4 +81,4 @@ conda create -yc conda-forge -n py python=3.8 joblib jupyterlab seaborn numpy pa
 
 ### Install and symlink macvim (brew installed macvim conflicts with brew installed vim)
 ##### ln -s $HOMEBREW_PREFIX/Cellar/macvim/**/MacVim.app/ /Applications/MacVim.app
-conda init zsh
+mamba init zsh
