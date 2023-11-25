@@ -26,44 +26,19 @@ curl https://raw.githubusercontent.com/maptv/setup/main/.gitconfig -o ~/.gitconf
 ## Install vim and neovim
 # Zsh theme: powerlevel10k
 # Zsh plugins: zsh-autosuggestions and zsh-syntax-highlighting
-brew install ack bash bat bat-extras bit-git black bottom cairo diff-so-fancy duti dvc exa fd ffmpeg fpp fzf gh git git-delta gnu-tar gnupg imagemagick jq librsvg luarocks neovim node page pandoc pass python@3.11 ranger rename ripgrep ripgrep-all romkatv/powerlevel10k/powerlevel10k ruby rust rustup-init sc-im shellcheck tccutil the_platinum_searcher the_silver_searcher tig tldr tmux universal-ctags vim wget xpdf zsh zsh-autocomplete zsh-autopair zsh-autosuggestions zsh-fast-syntax-highlighting zsh-completions zsh-vi-mode zsh-you-should-use 
+brew bundle
 
 ## Install fzf key bindings and fuzzy completion
 /home/linuxbrew/.linuxbrew/opt/fzf/install --completion --key-bindings --no-fish --no-update-rc
 
-brew install --cask mambaforge
-
-# Use Bash as a backup
-curl https://raw.githubusercontent.com/maptv/setup/main/.bash_profile -o ~/.bash_profile
-
-curl https://raw.githubusercontent.com/maptv/setup/main/.inputrc -o ~/.inputrc
-
-## Download dotfiles (configuration files)
-### Vim
-curl https://raw.githubusercontent.com/maptv/setup/main/.vimrc -o ~/.vimrc
-
-### Neovim
-curl https://raw.githubusercontent.com/maptv/setup/main/init.vim -o ~/.config/nvim/init.vim --create-dirs
-
-### SpaceVim
-git clone https://github.com/SpaceVim/SpaceVim.git ~/.SpaceVim
-
-curl https://raw.githubusercontent.com/maptv/setup/main/init.toml -o ~/.SpaceVim.d/init.toml --create-dirs
-
-curl https://raw.githubusercontent.com/maptv/setup/main/myspacevim.vim -o ~/.SpaceVim.d/autoload/myspacevim.vim --create-dirs
-
-## Set up oh my tmux
-curl https://raw.githubusercontent.com/maptv/setup/main/.tmux.conf -o ~/.tmux.conf
-
-curl https://raw.githubusercontent.com/maptv/setup/main/.tmux.conf.local -o ~/.tmux.conf.local
-
+## tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Python
 
 ## Install nodejs (for coc.vim) and python packages (for nvim-R and ncm-R):
 ### https://github.com/jalvesaq/Nvim-R/blob/main/doc/Nvim-R.txt#L1953
-mamba install -yc conda-forge cookiecutter nodejs neovim pybtex
+mamba install -yc conda-forge nodejs neovim
 
 #### I don't use jupyterlab-git extension, I only demo it in classes
 ##### jupyter labextension install @jupyterlab/git
