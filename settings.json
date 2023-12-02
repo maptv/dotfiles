@@ -227,6 +227,8 @@
 "zenMode.hideLineNumbers": false,
 "zenMode.centerLayout": false,
 "open-in-vim.openMethod": "kitty",
+"terminal.integrated.defaultProfile.osx": "zsh",
+"terminal.integrated.defaultProfile.linux": "zsh",
 "editor.quickSuggestions": {
     "other": "inline",
     "comments": "inline",

@@ -22,9 +22,6 @@ sudo chsh -s /home/linuxbrew/.linuxbrew/bin/zsh
 ## Install fzf key bindings and fuzzy completion
 /home/linuxbrew/.linuxbrew/opt/fzf/install --completion --key-bindings --no-fish --no-update-rc
 
-## tmux
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
 # Python
 
 ## Install nodejs (for coc.vim) and python packages (for nvim-R and ncm-R):
