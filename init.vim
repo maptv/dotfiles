@@ -318,7 +318,7 @@ highlight Terminal ctermbg=NONE guibg=NONE ctermfg=white guifg=white
 "" fzf.vim
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
-" let $FZF_DEFAULT_OPTS="'--bind=change:top,ctrl-/:toggle-preview,ctrl-n:down,ctrl-p:up,ctrl-k:kill-line,alt-p:toggle-preview,alt-w:toggle-preview-wrap,alt-y:execute-silent(echo {1} | pbcopy)' --cycle --delimiter=':, ' --exit-0 --inline-info --multi --no-height --no-sort --preview='bat --style=numbers --color=always {1}' --preview-window='70%:hidden' --reverse --tiebreak=index"
+let $FZF_DEFAULT_OPTS="'--bind=change:top,ctrl-/:toggle-preview,ctrl-n:down,ctrl-p:up,ctrl-k:kill-line,alt-p:toggle-preview,alt-w:toggle-preview-wrap,alt-y:execute-silent(echo {1} | pbcopy)' --cycle --delimiter=':, ' --exit-0 --inline-info --multi --no-height --no-sort --preview='bat --style=numbers --color=always {1}' --preview-window='70%:hidden' --reverse --tiebreak=index"
 
 " Disable visualbell
 set noerrorbells visualbell t_vb=
@@ -445,6 +445,9 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 "*****************************************************************************
 "" Autocmd Rules
 "*****************************************************************************
+
+" https://neovim.io/doc/user/lua.html#vim.highlight
+au TextYankPost * silent! lua vim.highlight.on_yank {on_visual=false}
 
 " https://til.hashrocket.com/posts/17c44eda91-persistent-folds-between-vim-sessions
 augroup remember_folds
@@ -862,7 +865,7 @@ nnoremap ]g :diffget //3<CR>
 " nnoremap <leader>gd :Gvdiff<CR>
 " nnoremap <leader>gr :Gremove<CR>
 " nnoremap <leader>gl :Glog<CR>
-" nnoremap <leader>gg :Gwrite<CR>:Gcommit -m "edit "%<CR>:Gpush<CR>
+nnoremap <A-S-f> :Gw<bar>G! commit -m "M "%<bar>G! push<CR>
 
 " https://github.com/neoclide/coc-git
 " https://github.com/neoclide/coc-yank

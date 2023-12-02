@@ -6,18 +6,6 @@ echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/ins
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# Make zsh the default shell
-sudo chsh -s /home/linuxbrew/.linuxbrew/bin/zsh
-
-# Zsh config
-curl https://raw.githubusercontent.com/maptv/setup/main/.zshrc -o ~/.zshrc
-
-# powerlevel10k config
-curl https://raw.githubusercontent.com/maptv/setup/main/.p10k.zsh -o ~/.p10k.zsh
-
-# git config
-curl https://raw.githubusercontent.com/maptv/setup/main/.gitconfig -o ~/.gitconfig
-
 # Shell programs needed for aliases
 ## Install fzf (fuzzy finder)
 ## Install bat and exa (for fzf file preview)
@@ -27,6 +15,9 @@ curl https://raw.githubusercontent.com/maptv/setup/main/.gitconfig -o ~/.gitconf
 # Zsh theme: powerlevel10k
 # Zsh plugins: zsh-autosuggestions and zsh-syntax-highlighting
 brew bundle
+
+# Make zsh the default shell
+sudo chsh -s /home/linuxbrew/.linuxbrew/bin/zsh
 
 ## Install fzf key bindings and fuzzy completion
 /home/linuxbrew/.linuxbrew/opt/fzf/install --completion --key-bindings --no-fish --no-update-rc

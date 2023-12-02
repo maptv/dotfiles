@@ -727,12 +727,19 @@ inoremap <M-v> <PageUp>
 inoremap <M-x> <C-o>:
 inoremap <M-y> <C-o>:call <SID>YankPop()<CR>
 inoremap <M-z> <C-o>dt
-inoremap <silent> <M-g> <C-o>:call <SID>GotoLine()<CR>
+" inoremap <silent> <M-g> <C-o>:call <SID>GotoLine()<CR>
 inoremap <silent> <M-q> <C-o>:call <SID>FillParagraph()<CR>
 vnoremap <M-!> !
 vnoremap <M-h> o}o
 vnoremap <M-w> "1y
 vnoremap <M-x> :
+
+funct! Exec(command)
+    redir =>output
+    silent exec a:command
+    redir END
+    return output
+endfunct!
 
 "" Git
 nnoremap [g :diffget //2<CR>
@@ -744,7 +751,7 @@ nnoremap ]g :diffget //3<CR>
 " nnoremap <leader>gd :Gvdiff<CR>
 " nnoremap <leader>gr :Gremove<CR>
 " nnoremap <leader>gl :Glog<CR>
-" nnoremap <leader>gg :Gwrite<CR>:Gcommit -m "edit "%<CR>:Gpush<CR>
+nnoremap <A-S-f> :Gw<bar>G! commit -m "M "%<bar>G! push<CR>
 
 " https://github.com/neoclide/coc-git
 " https://github.com/neoclide/coc-yank
@@ -1525,5 +1532,6 @@ set <M-%>=%
 set <M-*>=*
 set <M-.>=.
 set <M-^>=^
+set <M-S-f>=F
 
 set sel=exclusive
