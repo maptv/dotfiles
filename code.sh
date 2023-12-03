@@ -1,0 +1,17 @@
+code --install-extension asvetliakov.vscode-neovim
+code --install-extension ms-python.black-formatter
+code --install-extension ms-python.python
+code --install-extension ms-python.vscode-pylance
+code --install-extension ms-toolsai.jupyter
+code --install-extension ms-toolsai.jupyter-keymap
+code --install-extension ms-toolsai.jupyter-renderers
+code --install-extension ms-toolsai.vscode-jupyter-cell-tags
+code --install-extension ms-toolsai.vscode-jupyter-slideshow
+code --install-extension quarto.quarto
+code --install-extension REditorSupport.r
+code --install-extension TabNine.tabnine-vscode
+code --install-extension ms-vsliveshare.vsliveshare
+code --install-extension eamodio.gitlens
+code --install-extension vscodevim.vim
+code --disable-extension vscodevim.vim
+code --install-extension jonsmithers.open-in-vim

@@ -112,8 +112,6 @@ brew "librsvg"
 brew "graphviz"
 # Next generation open source RPC library and framework
 brew "grpc@1.54"
-# Post-modern modal text editor
-brew "helix"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Lightweight and flexible command-line JSON processor
@@ -126,8 +124,6 @@ brew "ruby"
 brew "moreutils"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# No Nonsense Neovim Client in Rust
-brew "neovide"
 # Trigger notifications when a process completes
 brew "noti"
 # Use Neovim as pager
@@ -174,8 +170,6 @@ brew "tpm"
 brew "universal-ctags"
 # Vi 'workalike' with many additional features
 brew "vim"
-# Convert HTML to PDF
-brew "weasyprint"
 # Internet file retriever
 brew "wget"
 # PDF viewer
@@ -196,24 +190,3 @@ brew "zsh-fast-syntax-highlighting"
 brew "zsh-vi-mode"
 # ZSH plugin that reminds you to use existing aliases for commands you just typed
 brew "zsh-you-should-use"
-vscode "asvetliakov.vscode-neovim"
-vscode "eamodio.gitlens"
-vscode "george-alisson.html-preview-vscode"
-vscode "GitHub.codespaces"
-vscode "jonsmithers.open-in-vim"
-vscode "ms-python.black-formatter"
-vscode "ms-python.python"
-vscode "ms-python.vscode-pylance"
-vscode "ms-toolsai.jupyter"
-vscode "ms-toolsai.jupyter-keymap"
-vscode "ms-toolsai.jupyter-renderers"
-vscode "ms-toolsai.vscode-jupyter-cell-tags"
-vscode "ms-toolsai.vscode-jupyter-slideshow"
-vscode "ms-vsliveshare.vsliveshare"
-vscode "quarto.quarto"
-vscode "REditorSupport.r"
-vscode "sumneko.lua"
-vscode "TabNine.tabnine-vscode"
-vscode "vscodevim.vim"
-vscode "WallabyJs.quokka-vscode"
-vscode "withfig.fig"
