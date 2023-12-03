@@ -24,3 +24,6 @@ brew bundle
 /home/linuxbrew/.linuxbrew/opt/fzf/install --completion --key-bindings --no-fish --no-update-rc
 
 bash code.sh
+
+
+git clone --depth 1 https://github.com/whjvenyl/fasd.git ~/whjvenyl/fasd && cd ~/whjvenyl/fasd && sudo make install && cd
