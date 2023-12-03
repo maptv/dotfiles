@@ -4,6 +4,9 @@ curl https://raw.githubusercontent.com/maptv/setup/main/.zshrc -o ~/.zshrc
 # Vim config
 curl https://raw.githubusercontent.com/maptv/setup/main/.vimrc -o ~/.vimrc
 
+# powerlevel10k config
+curl https://raw.githubusercontent.com/maptv/setup/main/.p10k.zsh -o ~/.p10k.zsh
+
 # Neovim config
 curl https://raw.githubusercontent.com/maptv/setup/main/init.vim -o ~/.config/nvim/init.vim --create-dirs
 
