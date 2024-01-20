@@ -8,8 +8,6 @@ brew "bat-extras"
 brew "bottom"
 # GNU File, Shell, and Text utilities
 brew "diff-so-fancy"
-# GNU Emacs text editor
-brew "emacs"
 # Git for data science projects
 brew "dvc"
 # Modern replacement for 'ls'
@@ -28,8 +26,6 @@ brew "glab"
 brew "jq"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Trigger notifications when a process completes
-brew "noti"
 # Use Neovim as pager
 brew "page"
 # Swiss-army knife of markup format conversion
