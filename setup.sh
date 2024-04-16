@@ -41,3 +41,17 @@ git clone --depth 1 https://github.com/whjvenyl/fasd ~/whjvenyl/fasd && cd ~/whj
 
 ## Install Ewka font
 # git clone --depth 1 https://github.com/maptv/ewka ~/maptv/ewka && cd ~/whjvenyl/fasd && mkdir ~/.fonts && cp ~/maptv/ewka/nerd/* ~/.fonts && fc-cache -f -v
+#
+### Lunar Vim
+curl https://raw.githubusercontent.com/maptv/setup/main/pip.conf -o ~/.config/pip/pip.conf --create-dirs
+
+yes y | bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+
+curl https://raw.githubusercontent.com/maptv/setup/main/config.lua -o ~/.config/lvim/config.lua --create-dirs
+
+### Install vim plugins
+/opt/homebrew/bin/vim -c PlugInstall -c CocInstall -c wqa
+
+/opt/homebrew/bin/nvim -c PlugInstall -c CocInstall -c wqa
+
+~/.local/bin/lvim -c LvimSyncCorePlugins -c wqa
