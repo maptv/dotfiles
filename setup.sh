@@ -14,10 +14,6 @@ echo 'let g:better_whitespace_enabled=0' >> ~/.config/page/init.vim
 curl https://raw.githubusercontent.com/maptv/setup/main/coc-settings.json -o ~/.config/nvim/coc-settings.json --create-dirs
 curl https://raw.githubusercontent.com/maptv/setup/main/coc-settings.json -o ~/.config/nvim/coc-settings.json --create-dirs
 
-### Lunar Vim
-curl https://raw.githubusercontent.com/maptv/setup/main/config.lua -o ~/.config/lvim/config.lua --create-dirs
-yes n | bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
-
 # powerlevel10k
 curl https://raw.githubusercontent.com/maptv/setup/main/.p10k.zsh -o ~/.p10k.zsh
 
@@ -43,6 +39,10 @@ brew bundle
 
 ## Install fasd
 git clone --depth 1 https://github.com/whjvenyl/fasd ~/whjvenyl/fasd && cd ~/whjvenyl/fasd && sudo make install && cd
+
+### Lunar Vim
+curl https://raw.githubusercontent.com/maptv/setup/main/config.lua -o ~/.config/lvim/config.lua --create-dirs
+yes n | /bin/bash -c "$(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)"
 
 ## Install Ewka font
 # git clone --depth 1 https://github.com/maptv/ewka ~/maptv/ewka && cd ~/whjvenyl/fasd && mkdir ~/.fonts && cp ~/maptv/ewka/nerd/* ~/.fonts && fc-cache -f -v
