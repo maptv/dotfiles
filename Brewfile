@@ -49,10 +49,6 @@ brew "the_silver_searcher"
 brew "tig"
 # Simplified and community-driven man pages
 brew "tldr"
-# Terminal multiplexer
-brew "tmux"
-# Plugin manager for tmux
-brew "tpm"
 # Maintained ctags implementation
 brew "universal-ctags"
 # Vi 'workalike' with many additional features
