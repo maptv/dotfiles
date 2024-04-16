@@ -1,17 +1,18 @@
+tap "romkatv/powerlevel10k"
 # Search tool like grep, but optimized for programmers
 brew "ack"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Bash scripts that integrate bat with various command-line tools
 brew "bat-extras"
+# Bit is a modern Git CLI
+brew "bit-git"
 # Yet another cross-platform graphical process/system monitor
 brew "bottom"
-# GNU File, Shell, and Text utilities
-brew "diff-so-fancy"
-# Git for data science projects
-brew "dvc"
-# Modern replacement for 'ls'
-brew "exa"
+# Modern, maintained replacement for ls
+brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # CLI program that accepts piped input and presents files for selection
@@ -34,12 +35,12 @@ brew "pandoc"
 brew "powerlevel10k"
 # File browser
 brew "ranger"
+# Perl-powered file rename script with many helpful built-ins
+brew "rename"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Wrapper around ripgrep that adds multiple rich file types
 brew "ripgrep-all"
-# Safe, concurrent, practical language
-brew "rustup-init"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Multi-platform code-search similar to ack and ag
@@ -59,6 +60,8 @@ brew "universal-ctags"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Internet file retriever
+brew "zsh"
+# Real-time type-ahead completion for Zsh
 brew "zsh-autocomplete"
 # Auto-close and delete matching delimiters in zsh
 brew "zsh-autopair"
@@ -68,5 +71,9 @@ brew "zsh-autosuggestions"
 brew "zsh-completions"
 # Feature-rich syntax highlighting for Zsh
 brew "zsh-fast-syntax-highlighting"
+# Better and friendly vi(vim) mode plugin for ZSH
+brew "zsh-vi-mode"
+# Minimal installer for conda specific to conda-forge
+cask "miniforge"
 # Scientific and technical publishing system built on Pandoc
-cask quarto
+cask "quarto"
