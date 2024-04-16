@@ -35,8 +35,6 @@ brew "pandoc"
 brew "powerlevel10k"
 # File browser
 brew "ranger"
-# Perl-powered file rename script with many helpful built-ins
-brew "rename"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Wrapper around ripgrep that adds multiple rich file types
