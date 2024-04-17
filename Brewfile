@@ -67,4 +67,3 @@ brew "zsh-completions"
 brew "zsh-fast-syntax-highlighting"
 # Better and friendly vi(vim) mode plugin for ZSH
 brew "zsh-vi-mode"
-vscode "vscodevim.vim"
