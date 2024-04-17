@@ -1,3 +1,6 @@
+git config --global user.name "Martin Laptev"
+git config --global user.email "129316885+maptv@users.noreply.github.com"
+
 # Zsh
 curl https://raw.githubusercontent.com/maptv/setup/main/.zshrc -o ~/.zshrc
 
