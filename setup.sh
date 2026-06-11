@@ -49,5 +49,3 @@ yes n | /bin/bash -c "$(curl -s https://raw.githubusercontent.com/lunarvim/lunar
 
 ## Install Ewka font
 git clone --depth 1 https://github.com/maptv/ewka ~/maptv/ewka && cd ~/whjvenyl/fasd && mkdir ~/.fonts && cp ~/maptv/ewka/nerd/* ~/.fonts && fc-cache -f -v
-
-pip install neovim amazon-codewhisperer-jupyterlab-ext
